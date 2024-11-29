@@ -1,0 +1,303 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  scrollbar-width: thin;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 9rem;
+  -webkit-transition: height 0.2s ease;
+  transition: height 0.2s ease;
+  z-index: 100;
+}
+header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.3rem;
+  font-weight: 400;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+header h1:hover {
+  color: #ff4500;
+}
+
+@media (min-width: 760px) {
+  header {
+    height: 15rem;
+  }
+  header .hamburger {
+    display: none;
+  }
+}
+.switch {
+  height: 15rem;
+  visibility: visible;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #fff;
+  height: 7rem;
+  -webkit-box-shadow: 0 4px 2px -2px #e1d3d3;
+  box-shadow: 0 4px 2px -2px #e1d3d3;
+}
+
+.main-section {
+  display: grid;
+  place-items: center;
+  grid-column-gap: 2rem;
+  grid-row-gap: 6rem;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  margin-bottom: 3rem;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+.main-section .image {
+  width: 100%;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.main-section .image:hover {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.main-section .img1 {
+  background-image: url("../ade/thumbs/img1.jpg");
+}
+.main-section .img2 {
+  background-image: url("../ade/thumbs/img2.jpg");
+}
+.main-section .img3 {
+  background-image: url("../ade/thumbs/img3.jpg");
+}
+.main-section .img4 {
+  background-image: url("../ade/thumbs/img4.jpg");
+}
+.main-section .img5 {
+  background-image: url("../ade/thumbs/img5.jpg");
+}
+.main-section .img6 {
+  background-image: url("../ade/thumbs/img6.jpg");
+}
+
+.title {
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.7rem;
+  margin-top: 30rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.about-main {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.about-img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+article {
+  margin-top: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+article h1 {
+  font-size: 2.5rem;
+}
+
+article span {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  display: block;
+  color: #ff4500;
+}
+
+article p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 760px) {
+  .main {
+    height: 100vh;
+  }
+
+  .about-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.98);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 100;
+}
+.img-window img {
+  max-height: 80vh;
+  max-width: 80vw;
+}
+
+.img-btn-next,
+.img-btn-prev {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #111111;
+  position: fixed;
+  top: 80vh;
+  z-index: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.img-btn-next:hover,
+.img-btn-prev:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 760px) {
+  .img-btn-next,
+  .img-btn-prev {
+    top: 48vh;
+  }
+}
